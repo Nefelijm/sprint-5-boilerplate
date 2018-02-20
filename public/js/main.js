@@ -1,8 +1,8 @@
 $(document).ready(function() {
   const $forum = $('.forum');
-  // const $add = $('#addTheme');
+  
   const $name = $('#name');
-  const $mensage = $('#mensage');
+  // const $mensage = $('#mensage');
   const $count = $('#countModal');
 
   $.ajax({
@@ -32,31 +32,29 @@ $(document).ready(function() {
       }
     }
   });
-});
 
-const $add = $('#addTheme');
+  const $add = $('#addTheme');
   $add.click(function() {
     const $name = $('#name');
-    let name = $('#name').val();
-    console.log(name);    
-   let body = {
-      'author_name': name,      
+    const $mensage = $('#mensage');
+    let name = $name.val();
+    console.log(name);  
+    let mensage = $mensage.val();  
+    let body = {
+      'author_name': name,
+      'content': mensage,      
     };
     $.ajax({
       url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics',
-      contentType: 'application/json',
-      method: 'POST',
       data: body,
-      success: function() {
-       
+      success: function() {    
       },
       fail: function(request) {
         if (request) {
           alert(request.message);
         }
       }
-    });    
+
+    });
+  });
 });
-
-
-
