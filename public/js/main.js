@@ -5,7 +5,7 @@ $(document).ready(function() {
   const $count = $('#countModal');
 
   $.ajax({
-    url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics',
+    url: 'https://examen-laboratoria-sprint-5.herokuapp.com/topics',
     contentType: 'application/json',
     method: 'GET',
     success: function(response) {
@@ -56,7 +56,7 @@ $(document).ready(function() {
       'content': mensageS,      
     };
     $.ajax({
-      url: 'http://examen-laboratoria-sprint-5.herokuapp.com/topics',
+      url: 'https://examen-laboratoria-sprint-5.herokuapp.com/topics',
       data: body,
       method: 'POST',
       success: function() {    

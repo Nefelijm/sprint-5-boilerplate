@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Obtener tema individual 
-  const url = (`http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}`); 
+  const url = (`https://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}`); 
   $.ajax({
     url: url,
     contentType: 'application/json',
@@ -22,7 +22,7 @@ $(document).ready(function() {
   });
 
   // Mostrar respuestas de un tema
-  const urlRes = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}/responses`;
+  const urlRes = `https://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}/responses`;
   $.ajax({
     url: urlRes,
     contentType: 'application/json',
@@ -50,7 +50,7 @@ $(document).ready(function() {
       'topic_id': localStorage.identifier,
     };  
     $.ajax({
-      url: (`http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}/responses`),
+      url: (`https://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}/responses`),
       // contentType: 'application/json',
       method: 'POST',
       data: body,
