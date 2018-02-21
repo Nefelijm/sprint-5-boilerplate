@@ -23,13 +23,12 @@ $(document).ready(function() {
         <p class="name">${obj.author_name}</p>
         <p class="content">${obj.content}</p>
         <p class="count">${obj.responses_count}</p>
-        <button class="information" data-target=${obj.id}>VER INFORMACION</button>
+        <button class="information" data-target=${response[i].id}>VER INFORMACION</button>
         </div></div >`);    
 
       });
 
-      $('.information').on('click', function () {
-      
+      $('.information').on('click', function() {      
         let id = ($(this).data('target'));
         console.log(id);
         localStorage.setItem('identifier', id);
@@ -45,7 +44,8 @@ $(document).ready(function() {
       }
     }
   });
-
+   
+  // POST
   const $add = $('#addTheme');
   $add.click(function() {
     const $name = $('#name');
