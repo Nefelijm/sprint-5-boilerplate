@@ -10,14 +10,12 @@ $(document).ready(function() {
     method: 'GET',
     success: function(response) {
       console.log(response);
-
       $.each(response, function(i, obj) {
         // console.log(obj.content);
         // console.log(obj.author_name);
         // console.log(obj.content);
         // console.log(obj.responses_count);
         // console.log(response.id);
-
         $forum.append(`<div class="row ">
         <div class="col-xs-12 col-md-8 col-md-offset-2 styleContainer">
         <p class="name">NOMBRE: ${obj.author_name}</p>
@@ -26,26 +24,24 @@ $(document).ready(function() {
         <div class="col-md-6 col-md-offset-3">
         <button class="information btn btn-default" data-target=${response[i].id}>VER INFORMACIÓN</button>
         </div>
-        </div></div >`);    
-
-      });
+        </div></div >`); 
+     });
 
       $('.information').on('click', function() {      
         let id = ($(this).data('target'));
         console.log(id);
         localStorage.setItem('identifier', id);
         window.location.href = 'verTopic.html'
-      });      
-      
-    },      
+      });   
+    },    
 
 
     fail: function(request) {
       if (request) {
         alert(request.message);
       }
-    }
-  });
+    }    
+});
    
   // POST
   const $add = $('#addTheme');
@@ -70,7 +66,6 @@ $(document).ready(function() {
           alert(request.message);
         }
       }
-
     });
   });
 
@@ -80,20 +75,5 @@ $(document).ready(function() {
     $('.forum div').filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
-  });
-  // var request = new XMLHttpRequest();
-  // request.open('POST', 'http://examen-laboratoria-sprint-5.herokuapp.com/topics');
-  // request.setRequestHeader('Content-Type', 'application/json');
-  // request.onreadystatechange = function () {
-  //   if (this.readyState === 4) {
-  //     console.log('Status:', this.status);
-  //     console.log('Headers:', this.getAllResponseHeaders());
-  //     console.log('Body:', this.responseText);
-  //   }
-  // };
-  // var body = {
-  //   'author_name': ':8DSXDF',
-  //   'content': 'y le mande a la firebase',
-  // };
-  // request.send(JSON.stringify(body));
+  });  
 });

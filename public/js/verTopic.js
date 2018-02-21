@@ -14,13 +14,13 @@ $(document).ready(function() {
         </div></div >`); 
     },
 
-
     fail: function(request) {
       if (request) {
         alert(request.message);
       }
     }
   });
+
   // Mostrar respuestas de un tema
   const urlRes = `http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}/responses`;
   $.ajax({
@@ -48,8 +48,7 @@ $(document).ready(function() {
       'author_name': title,
       'content': mensages,
       'topic_id': localStorage.identifier,
-    };
-  
+    };  
     $.ajax({
       url: (`http://examen-laboratoria-sprint-5.herokuapp.com/topics/${localStorage.identifier}/responses`),
       // contentType: 'application/json',
