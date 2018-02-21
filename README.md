@@ -1,5 +1,13 @@
 # FORO DE OPINIÓN
 
+## Vista Desktop:
+
+![Sin titulo](public/assets/images/desktop.png)
+
+## Vista mobile:
+
+![Sin titulo](public/assets/images/mobile.png)
+
 ## Objetivo:
 
 El objetivo es crear un foro donde se puedan crear temas y responder a esos temas. Un tema tiene:
