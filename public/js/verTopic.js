@@ -56,8 +56,8 @@ $(document).ready(function() {
       method: 'POST',
       data: body,
       success: function(response) {
-      console.log(response); 
-         $('#topic').append(`
+        console.log(response); 
+        $('#topic').append(`
           <p class="content">ID: ${localStorage.identifier}</p>
         <p class="name"> AUTOR DEL TEMA: ${title}</p>
        <p class="content">INFORMACION: ${mensages}</p>
@@ -70,10 +70,6 @@ $(document).ready(function() {
         }
       }
     });
-
-
   });
-
-
 });
 
