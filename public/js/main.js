@@ -20,7 +20,7 @@ $(document).ready(function() {
 
         $forum.append(`<div class="row">
         <div class="col-xs-12">
-        <p class="name">${obj.author_name}</p>
+        <p class="name">NOMBRE: ${obj.author_name}</p>
         <p class="content">${obj.content}</p>
         <p class="count">${obj.responses_count}</p>
         <button class="information" data-target=${response[i].id}>VER INFORMACION</button>
