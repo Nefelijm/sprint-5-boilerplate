@@ -20,17 +20,56 @@
       </div>
     </header>
     <main>
-      <div class="container" id="informationTopic">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs12">
+            <div id="informationTopic">
+
+            </div>
+            <span>RESPUESTAS:</span>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">CREAR RESPUESTAS</button>
+            
+            <div id="topic">
+
+            </div>
+          </div>
+        </div>     
 
       </div>
-      <div class="container">
-        <span>RESPUESTAS:</span><button>CREAR RESPUESTA</button>
+
+      
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Nuevo Tema</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <label for="name">AUTOR DEL COMENTARIO:</label>
+            <input type="text" class="form-control" id="nameResponse" aria-describedby="emailHelp" placeholder="nombre">
+            <label for="mensage">COMENTARIO:</label>
+            <textarea class="form-control" id="mensageResponse" rows="3"></textarea>
+            <p id="countModal"></p>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button id="responseTopic">Crear</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
+    </div>
     </main>
   
     
      <!-- jQuery -->
     <script src="vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/verTopic.js"></script>
   </body>
