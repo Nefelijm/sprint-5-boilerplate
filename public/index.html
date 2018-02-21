@@ -7,28 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>Foro</title>
   </head>
   <body>
     <header>
-      <div class="row">
-        <div class="container-fluid">
-          <div class="col-xs-12">
-              <h1>Aqui van todos los temas</h1>
+      <div class="container-fluid navbar">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 col-md-offset-4">
+              <h1 class="styleTitle">Foro Cool</h1>
           </div>
+          <div class="col-xs-12 col-md-4 ">
+            <img src="assets/images/discussion.png" class="styleIcon" alt="">
+        </div>
         </div>
       </div>
     </header>
     <main>
-      <div class="container">
+      <div class="container-fluid styleInput">
         <div class="row">
-          <div class="col-xs-12">
-            <input id="search" type="text" placeholder="buscar">
-            <button>BUSCAR</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> AGREGAR TEMA</button>
+          <div class="col-xs-12 col-md-2 col-md-offset-3">
+            <input id="search" type="text" placeholder="buscar" class="styleSearch">
           </div>
-        </div> 
-        <div class="forum"></div>     
+          <div class="col-xs-12 col-md-1">
+            <p>Filtro</p>
+          </div>
+          <div class="col-xs-12 col-md-2">
+            <button type="button" class="btn btn-default information" data-toggle="modal" data-target="#myModal"> AGREGAR TEMA</button>
+          </div>
+        </div>
+      </div> 
+      <br>
+      <div class="forum"></div>     
       </div>           
    
      

@@ -3,3 +3,30 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 }
+
+.navbar {
+    height: 12vh;
+    background-color: rgba(12, 11, 11, 0.884);
+}
+.styleTitle {
+    font-family: 'BioRhyme Expanded', serif;
+    color: white;
+}
+.information {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.styleContainer {
+    margin-bottom: 13px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F79647;
+}
+.styleInput {
+    height: 10vh;
+}
+.styleSearch {
+    padding: 5px;
+    border-radius: 15px;
+}

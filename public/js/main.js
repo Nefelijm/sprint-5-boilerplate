@@ -18,12 +18,14 @@ $(document).ready(function() {
         // console.log(obj.responses_count);
         // console.log(response.id);
 
-        $forum.append(`<div class="row">
-        <div class="col-xs-12">
+        $forum.append(`<div class="row ">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 styleContainer">
         <p class="name">NOMBRE: ${obj.author_name}</p>
-        <p class="content">${obj.content}</p>
-        <p class="count">${obj.responses_count}</p>
-        <button class="information" data-target=${response[i].id}>VER INFORMACION</button>
+        <p class="content">INFORMACIÓN: ${obj.content}</p>
+        <p class="count">Nro. de RESPUESTA: ${obj.responses_count}</p>
+        <div class="col-md-6 col-md-offset-3">
+        <button class="information btn btn-default" data-target=${response[i].id}>VER INFORMACIÓN</button>
+        </div>
         </div></div >`);    
 
       });
