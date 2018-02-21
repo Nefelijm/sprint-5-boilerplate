@@ -9,8 +9,8 @@ $(document).ready(function() {
       console.log(response);
       $('#informationTopic').append(`<div class="row">
         <div class="col-xs-12">
-        <p class="name"> AUTOR DEL TEMA: ${response.author_name}</p>
-        <p class="content">INFORMACION: ${response.content}</p>
+        <p class="name"><span class="autorCss"> AUTOR DEL TEMA:</span> ${response.author_name}</p>
+        <p class="content"><span class="autorCss"> INFORMACIÓN:</span> ${response.content}</p>
         </div></div >`); 
     },
 
@@ -57,10 +57,10 @@ $(document).ready(function() {
       data: body,
       success: function(response) {
         console.log(response); 
-        $('#topic').append(`
+        $('#topic').append(`<div class="answer">
           <p class="content">ID: ${localStorage.identifier}</p>
         <p class="name"> AUTOR DEL TEMA: ${title}</p>
-       <p class="content">INFORMACION: ${mensages}</p>
+       <p class="content">COMENTARIO: ${mensages}</p>
       
         </div >`);
       },

@@ -19,7 +19,7 @@ $(document).ready(function() {
         // console.log(response.id);
 
         $forum.append(`<div class="row ">
-        <div class="col-xs-12 col-md-6 col-md-offset-3 styleContainer">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 styleContainer">
         <p class="name">NOMBRE: ${obj.author_name}</p>
         <p class="content">INFORMACIÓN: ${obj.content}</p>
         <p class="count">Nro. de RESPUESTA: ${obj.responses_count}</p>
